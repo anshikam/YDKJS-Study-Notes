@@ -1,0 +1,111 @@
+a = 21;
+b = a * 2;
+
+//Outputting values with console
+console.log( b ); //log is a function call with b as input, console is an object reference
+
+//Outputting values with alert
+alert( b );
+
+//Input
+age = prompt("Please tell me your age");
+
+//Destructuring operator
+var foo = ['one', 'two', 'three'];
+var [one, two, three] = foo;
+
+//Strict equal operator : compares both type and value
+1 == '1'
+true
+1 === '1'
+false
+
+//Exponentiation 
+c =  2 ** 3;
+8 
+
+//Comma operator -- used in for loops
+for (var i = 0, j = 9; i <= j; i++, j--)
+
+//delete - to delete an object
+
+//typeof -- to get type of string, variable, keyword, object
+
+Type conversion in JavaScript is known as "coercion"
+Some utilities or functions provided by JavaScript are :
+
+var a = "42";
+var b = Number( a ); // Explicit coercion
+console.log( a );
+console.log( b ); //Implicit coercion
+
+When comparing different types, JavaScript uses implicit coercion
+It converts left handside operand to the right hand operand type
+if ( "99.99" == 99.99){ 
+	console.log( "Equal" );
+}
+
+Implicit coercion needs to be learned to write better JavaScript programs
+
+
+**Code comments
+Choices we make how to write our program matter -- to us, other team members and even our future self
+
+Some general guidelines
+- Code without comments => suboptimal
+- To many code comments => poorly written code
+- Comments should explain WHY and not WHAT. Sometime HOW.
+
+JavaScript is dynamically typed i.e. it allows a variable to hold any type of value at any time.
+
+JavaScript constants are capitalized : 
+var TAX_RATE = 0.3;
+
+ES6 has a new of defining constants:
+const TAX_RATE = 0.3;
+With Strict Mode, changing TAX_RATE would fail.
+
+In JavaScript a Block is set of statements within {..}
+if uses Block
+Blocks don't need a ; to conclude them
+
+If if expects boolean and value isn't, value will be coerced to boolean
+
+if("9.99"){
+  console.log( "true" );
+}
+true
+
+0 and "" are coerced to false
+
+**Loops
+while() { }, do { } while()
+
+do while runs atleast once even if condition is falsy
+
+**Scope (lexical scope)
+Scope is collection of variables as well as rules for how those variables are accessed by name
+In JS, each functions gets its own scope 
+Only code inside function can access function's scoped variables
+
+Scopes can be nested -- code inside inner scope can access outer scope's variables
+
+function outer() {
+  var a = 1;
+  
+  function inner() {
+    var b=2;
+    console.log( a + b );
+  }
+
+  inner();
+
+  console.log( a );
+}
+
+outer();
+
+3
+1
+
+
